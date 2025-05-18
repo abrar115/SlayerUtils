@@ -37,6 +37,7 @@ let pbrs = 99999
 let pbrk = 99999
 let pbrt = 99999
 let pbrtier = 0
+let pbrn = null
 
 // sven
 
@@ -44,6 +45,7 @@ let pbss = 99999;
 let pbsk = 99999;
 let pbst = 99999;
 let pbstier = 0
+let pbsn = null
 
 // tara
 
@@ -51,6 +53,7 @@ let pbts = 99999;
 let pbtk = 99999;
 let pbtt = 99999;
 let pbttier = 0
+let pbtn = null
 
 //  eman
 
@@ -58,14 +61,14 @@ let pbes = 99999;
 let pbek = 99999;
 let pbet = 99999;
 let pbetier = 0
-
+let pben = null
 // inferno
 
 let pbbs = 99999;
 let pbbk = 99999;
 let pbbt = 99999;
 let pbbtier = 0
-
+let pbbn = null
 let personalSlayer = null
 let personalTier = null
 
@@ -299,7 +302,7 @@ let numericTier = null  // rev
 register("command", ()=>{
      numericTier = romanToNumber(tier);
     if (specificName == "Zombie" && (currentTotal < pbrt || numericTier > pbrtier)) {
-        
+        pbrn = specificName
 
 if (numericTier > pbrtier){
         pbrs = currentSpawn
@@ -307,7 +310,7 @@ if (numericTier > pbrtier){
         pbrt = currentTotal
         pbrtier = numericTier
         
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbrn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbrs}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbrk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbrt.toFixed(2)}s`)
@@ -325,25 +328,32 @@ if (numericTier > pbrtier){
         
     
 
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbrn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbrs}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbrk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbrt.toFixed(2)}s`)
 
 }  else if (pbrtier > numericTier){
-    ChatLib.chat(`&bYou've Killed a Higher Tier Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbrn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbrs}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbrk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbrt.toFixed(2)}s`)
+
 
 }}
 
 else if (specificName === "Zombie" && !(currentTotal < pbtt || numericTier > pbttier)){
-    ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbrn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 }
 
 else {
-    ChatLib.chat(`&6[SlayerUtils]: &bSlayer is Not Revs`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbrn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbrs}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbrk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbrt.toFixed(2)}s`)
 }
 }).setName("pbr").setAliases("pbrev")
 
@@ -352,7 +362,7 @@ else {
 register("command", ()=>{    // tara
      numericTier = romanToNumber(tier);
     if (specificName == "Tarantula" && (currentTotal < pbtt || numericTier > pbttier)) {
-        
+        pbtn = specificName
 
 if (numericTier > pbrtier){
         pbts = currentSpawn
@@ -360,7 +370,7 @@ if (numericTier > pbrtier){
         pbtt = currentTotal
         pbttier = numericTier
         
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbtn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
@@ -378,24 +388,30 @@ if (numericTier > pbrtier){
         
     
 
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbtn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 
 }  else if (pbttier > numericTier){
-    ChatLib.chat(`&bYou've Killed a Higher Tier Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbtn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 
 }}
 else if (specificName === "Tarantula" && !(currentTotal < pbtt || numericTier > pbttier)){
-    ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbtn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 
 }
 else {
-    ChatLib.chat(`&6[SlayerUtils]: &bSlayer is Not Trantulas`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbtn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 }
 }).setName("pbt").setAliases("pbtara")
 
@@ -403,7 +419,7 @@ else {
 register("command", ()=>{   // sven
      numericTier = romanToNumber(tier);
     if (specificName == "Sven" && (currentTotal < pbst || numericTier > pbstier)) {
-        
+        pbsn = specificName
 
 if (numericTier > pbstier){
         pbss = currentSpawn
@@ -411,7 +427,7 @@ if (numericTier > pbstier){
         pbst = currentTotal
         pbstier = numericTier
         
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbsn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbss}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbsk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbst.toFixed(2)}s`)
@@ -429,25 +445,31 @@ if (numericTier > pbstier){
         
     
 
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbsn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbss}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbsk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbst.toFixed(2)}s`)
 
 }  else if (pbstier > numericTier){
-    ChatLib.chat(`&bYou've Killed a Higher Tier Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbsn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbss}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbsk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbst.toFixed(2)}s`)
 
 }}
 
 else if (specificName === "Sven" && !(currentTotal < pbtt || numericTier > pbttier)){
-    ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbsn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 }
 
 else {
-    ChatLib.chat(`&6[SlayerUtils]: &bSlayer is Not Svens`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbsn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbss}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbsk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbst.toFixed(2)}s`)
 }
 }).setName("pbs").setAliases("pbsven")
 
@@ -455,7 +477,7 @@ else {
 register("command", ()=>{    // eman
      numericTier = romanToNumber(tier);
     if (specificName == "Eman" && (currentTotal < pbet || numericTier > pbetier)) {
-        
+        pben = specificName
 
 if (numericTier > pbetier){
         pbes = currentSpawn
@@ -463,7 +485,7 @@ if (numericTier > pbetier){
         pbet = currentTotal
         pbetier = numericTier
         
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pben} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbes}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbek}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbet.toFixed(2)}s`)
@@ -481,30 +503,37 @@ if (numericTier > pbetier){
         
     
 
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pben} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbes}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbek}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbet.toFixed(2)}s`)
 
 }  else if (pbetier > numericTier){
-    ChatLib.chat(`&bYou've Killed a Higher Tier Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pben} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbes}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbek}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbet.toFixed(2)}s`)
 
 }}
 
 else if (specificName === "Eman" && !(currentTotal < pbtt || numericTier > pbttier)){
-    ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pben} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 }
 else {
-    ChatLib.chat(`&6[SlayerUtils]: &bSlayer is Not Enderman`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pben} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbes}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbek}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbet.toFixed(2)}s`)
 }
 }).setName("pbe").setAliases("pbeman")
 
 register("command", ()=>{        // blaze
      numericTier = romanToNumber(tier);
     if (specificName == "Blaze" && (currentTotal < pbbt || numericTier > pbbtier)) {
+        pbbn = specificName
         
 
 if (numericTier > pbbtier){
@@ -513,7 +542,7 @@ if (numericTier > pbbtier){
         pbbt = currentTotal
         pbbtier = numericTier
         
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbbn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbbs}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbbk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbbt.toFixed(2)}s`)
@@ -531,25 +560,31 @@ if (numericTier > pbbtier){
         
     
 
-        ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbbn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbbs}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbbk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbbt.toFixed(2)}s`)
 
 }  else if (pbbtier > numericTier){
-    ChatLib.chat(`&bYou've Killed a Higher Tier Slayer: &6${specificName} Tier: &6${tier}`)
+     ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbbn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbbs}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbbk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbbt.toFixed(2)}s`)
 
 }}
 
 else if (specificName === "Blaze" && !(currentTotal < pbtt || numericTier > pbttier)){
-    ChatLib.chat(`&bPersonal Bests For Slayer: &6${specificName} Tier: &6${tier}`)
+    ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbbn} &bTier: &6${tier}`)
         ChatLib.chat(`&bPersonal Best Spawn: &6${pbts}s`)
         ChatLib.chat(`&bPersonal Best Kill: &6${pbtk}s`)
         ChatLib.chat(`&bPersonal Best Total Time: &6${pbtt.toFixed(2)}s`)
 }
 
 else {
-    ChatLib.chat(`&6[SlayerUtils]: &bSlayer is Not Blaze`)
+     ChatLib.chat(`&bPersonal Bests For Slayer: &6${pbbn} &bTier: &6${tier}`)
+        ChatLib.chat(`&bPersonal Best Spawn: &6${pbbs}s`)
+        ChatLib.chat(`&bPersonal Best Kill: &6${pbbk}s`)
+        ChatLib.chat(`&bPersonal Best Total Time: &6${pbbt.toFixed(2)}s`)
 }
 }).setName("pbb").setAliases("pbblaze")
 
