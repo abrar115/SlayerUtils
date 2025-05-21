@@ -1,0 +1,9 @@
+{
+  "name": "wsg",
+  "creator": "x6_jade",
+  "description": "Our first module!",
+  "version": "1.0.0",
+  "entry": "index.js",
+  "requires" : ["tska"]
+
+}
