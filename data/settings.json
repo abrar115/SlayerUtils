@@ -1,0 +1,211 @@
+[
+    {
+        "category": "Slayer",
+        "settings": [
+            {
+                "type": 6,
+                "name": "CombatOverlay",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "PetOverlay",
+                "value": false
+            },
+            {
+                "type": 2,
+                "name": "Reset Combat XP"
+            },
+            {
+                "type": 2,
+                "name": "Edit Combat XP Overlay"
+            },
+            {
+                "type": 6,
+                "name": "rng",
+                "value": false
+            },
+            {
+                "type": 2,
+                "name": "Move Overlay"
+            },
+            {
+                "type": 6,
+                "name": "title",
+                "value": false
+            },
+            {
+                "type": 6,
+                "name": "Toggle Warning Messages",
+                "value": true
+            }
+        ]
+    },
+    {
+        "category": "Customization",
+        "settings": [
+            {
+                "type": 8,
+                "name": "multiCheckBoxTest",
+                "options": [
+                    {
+                        "name": "CombatTitle",
+                        "value": false
+                    },
+                    {
+                        "name": "CombatGained",
+                        "value": false
+                    },
+                    {
+                        "name": "CombatTime",
+                        "value": false
+                    },
+                    {
+                        "name": "CombatRate",
+                        "value": false
+                    },
+                    {
+                        "name": "CombatValues",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "type": 7,
+                "name": "TitleColor",
+                "value": 1
+            },
+            {
+                "type": 7,
+                "name": "GainedColor",
+                "value": 3
+            },
+            {
+                "type": 7,
+                "name": "TimeColor",
+                "value": 5
+            },
+            {
+                "type": 7,
+                "name": "RateColor",
+                "value": 11
+            },
+            {
+                "type": 7,
+                "name": "ValuesColor",
+                "value": 13
+            },
+            {
+                "type": 8,
+                "name": "PETmultiCheckBoxTest",
+                "options": [
+                    {
+                        "name": "PetTitle",
+                        "value": false
+                    },
+                    {
+                        "name": "PetPet",
+                        "value": false
+                    },
+                    {
+                        "name": "PetGained",
+                        "value": false
+                    },
+                    {
+                        "name": "PetRate",
+                        "value": false
+                    },
+                    {
+                        "name": "PetValues",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "type": 7,
+                "name": "TitleColorp",
+                "value": 1
+            },
+            {
+                "type": 7,
+                "name": "PetPetp",
+                "value": 2
+            },
+            {
+                "type": 7,
+                "name": "PetGainedp",
+                "value": 3
+            },
+            {
+                "type": 7,
+                "name": "RateColorp",
+                "value": 4
+            },
+            {
+                "type": 7,
+                "name": "ValuesColorp",
+                "value": 5
+            },
+            {
+                "type": 8,
+                "name": "RNGmultiCheckBoxTest",
+                "options": [
+                    {
+                        "name": "RngTitle",
+                        "value": false
+                    },
+                    {
+                        "name": "RngItem",
+                        "value": false
+                    },
+                    {
+                        "name": "RngMeter",
+                        "value": false
+                    },
+                    {
+                        "name": "RngTime",
+                        "value": false
+                    },
+                    {
+                        "name": "RngBar",
+                        "value": false
+                    },
+                    {
+                        "name": "RngValues",
+                        "value": false
+                    }
+                ]
+            },
+            {
+                "type": 7,
+                "name": "RngTitleColor",
+                "value": 1
+            },
+            {
+                "type": 7,
+                "name": "RngItemColor",
+                "value": 2
+            },
+            {
+                "type": 7,
+                "name": "RngMeterColor",
+                "value": 3
+            },
+            {
+                "type": 7,
+                "name": "RngTimeColor",
+                "value": 4
+            },
+            {
+                "type": 7,
+                "name": "RngBarColor",
+                "value": 5
+            },
+            {
+                "type": 7,
+                "name": "RngValuesColor",
+                "value": 6
+            }
+        ]
+    }
+]

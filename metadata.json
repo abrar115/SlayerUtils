@@ -1,0 +1,9 @@
+{
+  "name": "SlayerUtils",
+  "creator": "x6_jade",
+  "description": "Our first module!",
+  "version": "1.0.1",
+  "entry": "index.js",
+  "requires" : ["tska","Amaterasu", "Framebuffers"]
+
+}

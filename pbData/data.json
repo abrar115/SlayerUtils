@@ -1,0 +1,37 @@
+{
+    "tara": {
+        "spawn": null,
+        "kill": null,
+        "total": null,
+        "tier": 4,
+        "name": "Tarantula"
+    },
+    "rev": {
+        "spawn": 99999,
+        "kill": 99999,
+        "total": 99999,
+        "tier": 1
+    },
+    "eman": {
+        "spawn": 99999,
+        "kill": 99999,
+        "total": 99999,
+        "tier": 1
+    },
+    "sven": {
+        "spawn": 99999,
+        "kill": 99999,
+        "total": 99999,
+        "tier": 1
+    },
+    "blaze": {
+        "spawn": 21,
+        "kill": 0.5,
+        "total": 21.5,
+        "tier": 1,
+        "name": "Blaze"
+    },
+    "random": {
+        "bossKills": 0
+    }
+}
